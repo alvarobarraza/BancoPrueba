@@ -139,7 +139,7 @@ namespace Banco.Domain.Test.CuentasAhorro
         /*------------------------------Retirar------------------------*/
 
         [Test]
-        public void NoPuedeRetirarSaldoMenosAVeinteMil()
+        public void NoPuedeRetirarSaldoMenosAVeinteMilpesos()
         {
             var cuentaAhorro = new CuentaAhorro(numero: "10001", nombre: "Cuenta Ejemplo");
             decimal valorRetiro = 10000;
