@@ -189,10 +189,5 @@ namespace Banco.Domain.Test.CuentasAhorro
             Assert.AreEqual("El valor del retiro fue exitoso su nuevo saldo es $ 45.000,00 pesos", respuesta);
         }
 
-        [Test]
-        public void prueba()
-        {
-
-        }
     }
 }
