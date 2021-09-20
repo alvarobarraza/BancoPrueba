@@ -54,13 +54,15 @@ namespace Banco.Domain
 
         public string Retirar(decimal valorRetiro, DateTime fecha)
         {
-            
+            var tasaTemporal = _movimientos.Where(i => i.Cdt.Numero.Equals("10001")).FirstOrDefault();
+            var fechaFinal = tasaTemporal.Fecha.AddMonths(3);
+
             if (valorRetiro <= Saldo)
             {
-                //if()
+                //if ()
                 //{
                 //    double tEfectivaA = 0.06;
-                //    return "hola";
+                //    return "hola2";
                 //}
                 return "hola";
             }

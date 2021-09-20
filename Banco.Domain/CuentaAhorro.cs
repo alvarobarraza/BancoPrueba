@@ -70,11 +70,11 @@ namespace Banco.Domain
             {
                 return "El valor del saldo es inferior a $20.000,00 pesos";
             }
-            else if (valorRetiro > Saldo && Saldo >=20000)
+            else if (valorRetiro > Saldo && Saldo >=20000 )
             {
                 return "El valor del retiro excede al saldo de tu cuenta";
             }
-            else if (valorRetiro < Saldo && cantidadMovimiento <= 3 && Saldo >= 20000)
+            else if (valorRetiro < Saldo && cantidadMovimiento <= 3 && Saldo >= 20000 && valorRetiro>= 20000)
             {
                 _movimientos.Add(new Movimiento(cuentaAhorro: this, fecha: fecha, tipo: "Retiro", valor: valorRetiro));
                 Saldo = nuevoSaldo;

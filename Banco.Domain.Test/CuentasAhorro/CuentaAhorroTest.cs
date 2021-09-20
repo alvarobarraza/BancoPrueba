@@ -164,11 +164,11 @@ namespace Banco.Domain.Test.CuentasAhorro
             var cuentaAhorro = new CuentaAhorro(numero: "10001", nombre: "Cuenta Ejemplo");
             cuentaAhorro.Consignar(valorConsignacion: 50000, fecha: new DateTime(2020, 2, 1), ciudad: "");
 
-            decimal valorRetiro = 10000;
+            decimal valorRetiro = 20000;
             string respuesta = cuentaAhorro.Retirar(valorRetiro: valorRetiro, fecha: new DateTime(2020, 2, 1));
 
             Assert.AreEqual(1, cuentaAhorro.Movimientos.Where(i => i.Tipo.Equals("Retiro")).Count());
-            Assert.AreEqual("El valor del retiro fue exitoso su nuevo saldo es $ 40.000,00 pesos", respuesta);
+            Assert.AreEqual("El valor del retiro fue exitoso su nuevo saldo es $ 30.000,00 pesos", respuesta);
         }
 
         [Test]
